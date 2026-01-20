@@ -9,7 +9,6 @@ import CallToAction from '../components/CallToAction.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
@@ -31,14 +30,9 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hi! I'm Mathi Fonseca"
-					tagline="A Solutions Architect based in Berlin."
+					tagline="Fintech Builder & Technical Leader. Scaling payments at PedidosYa, Delivery Hero & Payrails."
 					align="start"
 				>
-					<!--<div class="roles">-->
-					<!--	<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>-->
-					<!--	<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>-->
-					<!--	<Pill><Icon icon="pencil-line" size="1.33em" /> Product</Pill>-->
-					<!--</div>-->
 				</Hero>
 
 				<img
@@ -79,27 +73,6 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<!--<section class="section with-background bg-variant">-->
-			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
-			<!--		<h3>Mentions</h3>-->
-			<!--		<p>-->
-			<!--			I have been fortunate enough to receive praise for my work in several publications. Take-->
-			<!--			a look below to learn more.-->
-			<!--		</p>-->
-			<!--	</header>-->
-
-			<!--	<div class="gallery">-->
-			<!--		<Grid variant="small">-->
-			<!--			{-->
-			<!--				['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (-->
-			<!--					<li class="mention-card">-->
-			<!--						<p>{brand}</p>-->
-			<!--					</li>-->
-			<!--				))-->
-			<!--			}-->
-			<!--		</Grid>-->
-			<!--	</div>-->
-			<!--</section>-->
 		</main>
 
 		<ContactCTA />
@@ -112,10 +85,6 @@ const projects = (await getCollection('work'))
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-	}
-
-	.roles {
-		display: none;
 	}
 
 	.hero img {
@@ -132,12 +101,6 @@ const projects = (await getCollection('work'))
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
-		}
-
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
 		}
 
 		.hero img {
@@ -228,25 +191,4 @@ const projects = (await getCollection('work'))
 		}
 	}
 
-	/* ====================================================== */
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
 </style>
