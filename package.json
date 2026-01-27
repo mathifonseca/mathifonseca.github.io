@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/partytown": "^2.1.2",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.16.13",
+    "astro": "^5.16.15",
     "typescript": "^5.6.3"
   }
 }
