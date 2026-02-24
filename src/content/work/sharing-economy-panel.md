@@ -1,5 +1,6 @@
 ---
 title: "Payments in the Sharing Economy"
+subtitle: "Panel discussion on the unique challenges of marketplace and platform payment architectures."
 publishDate: 2019-10-15 00:00:00
 img: /assets/sharing-economy-thumb.jpg
 img_alt: Payments in the Sharing Economy panel at PAYMENTSfn 2019

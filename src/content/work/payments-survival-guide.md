@@ -1,5 +1,6 @@
 ---
 title: "A Survival Guide for Payments"
+subtitle: "Hard-won lessons from building payment systems across 15 countries and $40B+ in annual transaction volume."
 publishDate: 2019-11-01 00:00:00
 img: /assets/survival-guide.jpg
 img_alt: Analytics dashboard representing payments monitoring and observability

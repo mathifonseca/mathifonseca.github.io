@@ -1,194 +1,328 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
 
 // Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Skills from "../components/Skills.astro";
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-	.slice(0, 4);
+const projects = (await getCollection("work"))
+    .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+    .slice(0, 4);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title="Hi! I'm Mathi Fonseca"
-					tagline="Solutions Architect & Fintech Builder. First employee at Payrails. Previously scaling payments at Delivery Hero & PedidosYa."
-					align="start"
-				>
-				</Hero>
+    <div class="stack gap-20 lg:gap-48">
+        <div class="wrapper stack gap-8 lg:gap-20">
+            <header class="hero">
+                <Hero
+                    title="Hi! I'm Mathi Fonseca"
+                    tagline="Principal Solutions Architect · Payments<br><span class='tagline-sub'>From founding engineer at a 3-person startup to architecting payment infrastructure at $40B GMV scale.</span>"
+                    align="start"
+                />
 
-				<img
-					alt="Mathi Fonseca smiling with a rainbow in the background"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
-			</header>
+                <img
+                    alt="Mathi Fonseca smiling with a rainbow in the background"
+                    width="480"
+                    height="620"
+                    src="/assets/portrait.jpg"
+                />
+            </header>
 
-			<Skills />
-		</div>
+            <Skills />
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work & Talks</h3>
-					<p>Take a look below at some of my featured work from the past few years.</p>
-				</header>
+            <section class="narrative">
+                <p>
+                    I design and build payment systems that operate at the
+                    intersection of product, engineering, and scale. Over 15
+                    years I've worked across the full stack of payments: PSP
+                    integrations, orchestration, fraud prevention, checkout
+                    optimisation, payouts, and compliance — across Latin
+                    America, Europe, the Middle East, and Asia.
+                </p>
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+                <p>
+                    At PedidosYa, I led payments and fraud engineering across
+                    the $2.5B GMV platform spanning 15 countries — one of the
+                    highest-fraud payment environments in the world. Imagine how
+                    being on-call was like!
+                </p>
+                <p>
+                    At Delivery Hero, I joined the Global Fintech team when it
+                    was 3 people and helped grow it to 100+ people in Berlin HQ
+                    and many more at regional entities, powering payment
+                    infrastructure for 50+ countries and $40B in annual GMV.
+                </p>
+                <p>
+                    At Payrails, I was the first employee — designing the core
+                    architecture from scratch, growing the company to 100+
+                    people across 9 teams, and building the product that
+                    enterprise merchants rely on for their entire payment stack.
+                </p>
+                <p>
+                    I move fluidly between whiteboard and codebase. I've led
+                    teams, shaped roadmaps, and written the actual code. I
+                    believe the best payment systems are built by engineers who
+                    understand the business, not just the protocol.
+                </p>
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
+                <p class="cta-highlight">
+                    &rarr; Currently open to Principal Solutions Architect /
+                    Senior Staff Engineer roles in payments and fintech, based
+                    in Berlin. Hybrid preferred.
+                </p>
+            </section>
+        </div>
 
-		</main>
+        <main class="wrapper stack gap-20 lg:gap-48">
+            <section class="section with-background bg-variant">
+                <header class="section-header stack gap-2 lg:gap-4">
+                    <h3>Tech & Domain Expertise</h3>
+                    <p>
+                        The tools, platforms, and domain knowledge I bring to
+                        the table.
+                    </p>
+                </header>
 
-		<ContactCTA />
-	</div>
+                <div class="gallery">
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h4>Core Languages</h4>
+                            <p>Java · Kotlin · Groovy · Python · Go</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Infrastructure</h4>
+                            <p>AWS · Docker · Kubernetes · Terraform</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Data</h4>
+                            <p>PostgreSQL · Redis · Kafka · BigQuery</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Payments Domain</h4>
+                            <p>
+                                40+ PSP integrations (Adyen, Stripe, Braintree +
+                                local LATAM methods)<br />Payment orchestration
+                                · Fraud prevention · Risk scoring
+                            </p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Compliance & Certifications</h4>
+                            <p>
+                                PCI-DSS · GDPR · Strong Customer Authentication
+                                (SCA/PSD2) · ISO 27001 awareness · AML/KYC · SOC
+                                3
+                            </p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Methods</h4>
+                            <p>
+                                Domain-Driven Design · Event-driven architecture
+                                · RFC-driven technical decisions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <ContactCTA />
+    </div>
 </BaseLayout>
 
 <style>
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+    .hero img {
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
 
-	@media (min-width: 50em) {
-		.hero {
-			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
-		}
+    @media (min-width: 50em) {
+        .hero {
+            display: grid;
+            grid-template-columns: 6fr 4fr;
+            padding-inline: 2.5rem;
+            gap: 3.75rem;
+        }
 
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
-			object-fit: cover;
-		}
-	}
+        .hero img {
+            aspect-ratio: 3 / 4;
+            border-radius: 4.5rem;
+            object-fit: cover;
+        }
+    }
 
-	/* ====================================================== */
+    /* ====================================================== */
 
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
+    .narrative {
+        max-width: 65ch;
+        margin-inline: auto;
+        font-size: var(--text-md);
+        color: var(--gray-300);
+        line-height: 1.7;
+    }
 
-	.with-background {
-		position: relative;
-	}
+    .narrative p {
+        margin-bottom: 1rem;
+    }
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
+    .narrative .cta-highlight {
+        font-weight: 700;
+        color: var(--accent-regular);
+        font-size: var(--text-lg);
+        margin-top: 1.5rem;
+    }
 
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+    @media (min-width: 50em) {
+        .narrative {
+            font-size: var(--text-lg);
+        }
+    }
 
-	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
-	}
+    /* ====================================================== */
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
+    .section {
+        display: grid;
+        gap: 2rem;
+    }
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
+    .with-background {
+        position: relative;
+    }
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+    .with-background::before {
+        --hero-bg: var(--bg-image-subtle-2);
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        left: 50%;
+        width: 100vw;
+        aspect-ratio: calc(2.25 / var(--bg-scale));
+        top: 0;
+        transform: translateY(-75%) translateX(-50%);
+        background:
+            url("/assets/backgrounds/noise.png") top center/220px repeat,
+            var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+            var(--gray-999);
+        background-blend-mode: overlay, normal, normal, normal;
+        mix-blend-mode: var(--bg-blend-mode);
+        z-index: -1;
+    }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+    .with-background.bg-variant::before {
+        --hero-bg: var(--bg-image-subtle-1);
+    }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    .section-header {
+        justify-self: center;
+        text-align: center;
+        max-width: 50ch;
+        font-size: var(--text-md);
+        color: var(--gray-300);
+    }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .section-header h3 {
+        font-size: var(--text-2xl);
+    }
 
-		.gallery {
-			grid-area: gallery;
-		}
+    @media (min-width: 50em) {
+        .section {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header header" "gallery gallery gallery gallery";
+            gap: 5rem;
+        }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+        .section.with-cta {
+            grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
+        }
 
+        .section-header {
+            grid-area: header;
+            font-size: var(--text-lg);
+        }
+
+        .section-header h3 {
+            font-size: var(--text-4xl);
+        }
+
+        .with-cta .section-header {
+            justify-self: flex-start;
+            text-align: left;
+        }
+
+        .gallery {
+            grid-area: gallery;
+        }
+
+        .cta {
+            grid-area: cta;
+        }
+    }
+
+    .tech-grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .tech-category {
+        background: var(--gray-999_40);
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .tech-category h4 {
+        font-size: var(--text-md);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .tech-category p {
+        color: var(--gray-300);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+    }
+
+    @media (min-width: 50em) {
+        .tech-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .tech-category {
+            border-radius: 1.5rem;
+            padding: 1.5rem 2rem;
+        }
+
+        .tech-category h4 {
+            font-size: var(--text-lg);
+        }
+
+        .tech-category p {
+            font-size: var(--text-md);
+        }
+    }
 </style>

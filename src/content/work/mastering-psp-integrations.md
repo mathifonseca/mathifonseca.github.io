@@ -1,5 +1,6 @@
 ---
 title: "Mastering PSP Integrations"
+subtitle: "A deep-dive into what actually breaks in payment provider integrations — and how to architect for resilience."
 publishDate: 2024-06-15 00:00:00
 img: /assets/psp-integrations.jpg
 img_alt: Credit card payment terminal representing PSP integrations

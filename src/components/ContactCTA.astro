@@ -5,10 +5,16 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:mathifonseca@gmail.com">
-		Send me a message
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+	<div class="cta-buttons">
+		<CallToAction href="mailto:mathifonseca@gmail.com">
+			Send me a message
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+		<CallToAction href="https://www.linkedin.com/in/mathifonseca/">
+			Connect on LinkedIn
+			<Icon icon="linkedin-logo" size="1.2em" />
+		</CallToAction>
+	</div>
 </aside>
 
 <style>
@@ -30,6 +36,13 @@ import Icon from './Icon.astro';
 		max-width: 15ch;
 	}
 
+	.cta-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+	}
+
 	@media (min-width: 50em) {
 		aside {
 			padding: 7.5rem;
@@ -41,6 +54,10 @@ import Icon from './Icon.astro';
 		h2 {
 			font-size: var(--text-3xl);
 			text-align: left;
+		}
+
+		.cta-buttons {
+			flex-direction: row;
 		}
 	}
 </style>

@@ -1,5 +1,6 @@
 ---
 title: "Payments Engineering and Stoicism"
+subtitle: "A talk on the mental models that keep payment engineers sane when systems fail at 2am."
 publishDate: 2020-03-04 00:00:00
 img: /assets/payments-stoicism-thumb.jpg
 img_alt: Payments Engineering and Stoicism conference talk thumbnail

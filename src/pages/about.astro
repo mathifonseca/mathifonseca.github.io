@@ -1,115 +1,214 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <BaseLayout title="About | Mathi Fonseca" description="About Mathi Fonseca">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Mathi Fonseca at work with a colleague"
-				/>
-			</Hero>
+    <div class="stack gap-20">
+        <main class="wrapper about">
+            <Hero
+                title="About"
+                tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+            >
+                <img
+                    width="1553"
+                    height="873"
+                    src="/assets/at-work.jpg"
+                    alt="Mathi Fonseca at work with a colleague"
+                />
+            </Hero>
 
-			<section>
-				<h2 class="section-title">Building & Leadership</h2>
-				<div class="content">
-					<p>I am a seasoned software and payments professional with a deep passion for building and scaling companies. As a founding team member, I played a key role in creating both PedidosYa and Payrails, contributing to their growth from the very start in various capacities. Although I started my career as a headphones-always-on coder, given the startup fast-paced and solution-oriented mindset, I quickly realized that understanding the broader business and product context was essential to making impactful contributions. Over time, I took on responsibilities beyond pure technical work, including aligning with business interests, collaborating with product and data teams, and even collaborating with sales teams. This holistic approach has allowed me to better understand user needs, prioritize development efforts, and drive value across both technical and business dimensions. My experiences across these ventures have equipped me with a unique perspective on how to navigate challenges, innovate, and lead teams to success in fast-paced environments.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Payments & Fraud</h2>
-				<div class="content">
-					<p>My expertise in payments and fraud prevention started as just a project at PedidosYa, but ended up becoming my main expertise. It has allowed me to drive impactful projects at PedidosYa, where I integrated many providers in Latam to provide our users with the best payment experience while keeping fraudsters out. After successfully building the solution and leading the teams, I moved to Delivery Hero HQ in Berlin. There I led the global fintech strategies from the technical perspective, overseeing and evaluating the integrations of payment systems across multiple countries and payment methods. In my role as a Solutions Architect at Payrails, I designed the product from the ground up, applying all the lessons learned in the past to help global businesses scale their payments and financial services.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Architecture & Engineering</h2>
-				<div class="content">
-					<p>My career spans a wide range of technical roles, with a focus on software architecture and engineering leadership. I’ve built and maintained complex systems, worked with cutting-edge technologies, and designed scalable and efficient platforms. This has included collaborating with various engineering teams to ensure alignment across diverse projects and global markets, while maintaining consistency and high performance. While my career steps led me to be further away from the code and closer to the people, I never actually stopped coding, it's still one of the most fun parts of my job.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Teaching & Mentorship</h2>
-				<div class="content">
-					<p>Teaching has always been a driving force in my career. I began as a Software Architecture and Software Engineering in the Cloud professor at Universidad ORT Uruguay, where I had the privilege and challenge of sharing my knowledge with the next generation of engineers. This passion for teaching continues in my professional life, where I conduct workshops, mentor colleagues, and foster growth and knowledge-sharing within my teams. I am committed to creating a culture of continuous learning and helping others develop their skills.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>I hold a Bachelor of Science in Information Technology and an advanced specialization in Big Data and Machine Learning from Universidad ORT Uruguay. This academic foundation supports my technical and leadership roles, allowing me to stay at the forefront of industry trends and continuously innovate in the fast-evolving fields of technology and fintech.</p>
-				</div>
-			</section>
-		</main>
+            <section>
+                <div class="content bio">
+                    <p>
+                        I’m Mathi, a Principal Solutions Architect specialising
+                        in payments, based in Berlin.
+                    </p>
+                    <p>
+                        I’ve spent my career building and scaling payment
+                        systems for some of Latin America and Europe’s largest
+                        platforms — from the ground up and from multiple
+                        different roles, becoming the living example of "if you
+                        can't beat them, join them".
+                    </p>
+                    <p>
+                        I’m equally comfortable defining a system's
+                        architecture, integrating a PSP, or conducting a sales
+                        demo. I’ve led cross-functional organisations, taught
+                        Software Architecture at university level for 7 years,
+                        and spoken at payments conferences across Europe.
+                    </p>
+                    <p>
+                        Outside of payments: stoicism, teaching, beer, and being
+                        the only Uruguayan that doesn't play football.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Building & Leadership</h2>
+                <div class="content">
+                    <p>
+                        Over 15 years, I've built and scaled companies from the
+                        ground up. As a founding team member at PedidosYa, I
+                        helped grow it into a $2.5B GMV platform spanning 15
+                        countries. At Payrails, I was the first employee —
+                        growing the company to 100+ people across 9 teams.
+                        Although I started my career as a headphones-always-on
+                        coder, the startup fast-paced mindset taught me that
+                        understanding the broader business and product context
+                        was essential. Over time, I took on responsibilities
+                        beyond pure technical work, including aligning with
+                        business interests, collaborating with product and data
+                        teams, and even working with sales teams. This holistic
+                        approach has allowed me to better understand user needs,
+                        prioritize development efforts, and drive value across
+                        both technical and business dimensions.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Payments & Fraud</h2>
+                <div class="content">
+                    <p>
+                        My expertise in payments and fraud prevention started as
+                        just a project at PedidosYa, but ended up becoming my
+                        main expertise. I led payments and fraud engineering
+                        across the $2.5B GMV platform spanning 15 countries —
+                        one of the highest-fraud payment environments in the
+                        world — integrating 40+ PSP providers across Latam to
+                        provide our users with the best payment experience while
+                        keeping fraudsters out. After successfully building the
+                        solution and leading the teams, I moved to Delivery Hero
+                        HQ in Berlin. There I joined the Global Fintech team
+                        when it was 3 people and helped grow it to 100+ people
+                        across 8 specialised squads, overseeing payment
+                        infrastructure for 50+ countries and $40B in annual GMV.
+                        In my role as a Solutions Architect at Payrails, I
+                        designed the product from the ground up, applying all
+                        the lessons learned in the past to help global
+                        businesses scale their payments and financial services.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Architecture & Engineering</h2>
+                <div class="content">
+                    <p>
+                        My career spans a wide range of technical roles, with a
+                        focus on software architecture and engineering
+                        leadership. I’ve built and maintained complex systems,
+                        worked with cutting-edge technologies, and designed
+                        scalable and efficient platforms. This has included
+                        collaborating with various engineering teams to ensure
+                        alignment across diverse projects and global markets,
+                        while maintaining consistency and high performance.
+                        While my career steps led me to be further away from the
+                        code and closer to the people, I never actually stopped
+                        coding, it’s still one of the most fun parts of my job.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Teaching & Mentorship</h2>
+                <div class="content">
+                    <p>
+                        Teaching has always been a driving force in my career.
+                        For 7 years, I served as a Software Architecture and
+                        Software Engineering in the Cloud professor at
+                        Universidad ORT Uruguay, where I had the privilege and
+                        challenge of sharing my knowledge with the next
+                        generation of engineers. I've also spoken at payments
+                        conferences across Europe. This passion for teaching
+                        continues in my professional life, where I conduct
+                        workshops, mentor colleagues, and foster growth and
+                        knowledge-sharing within my teams. I am committed to
+                        creating a culture of continuous learning and helping
+                        others develop their skills.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Education</h2>
+                <div class="content">
+                    <p>
+                        I hold a Bachelor of Science in Information Technology
+                        and an advanced specialization in Big Data and Machine
+                        Learning from Universidad ORT Uruguay. This academic
+                        foundation supports my technical and leadership roles,
+                        allowing me to stay at the forefront of industry trends
+                        and continuously innovate in the fast-evolving fields of
+                        technology and fintech.
+                    </p>
+                </div>
+            </section>
+        </main>
 
-		<ContactCTA />
-	</div>
+        <ContactCTA />
+    </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+    img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+    }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+    .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+    }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+    .content {
+        grid-column: 2 / 4;
+    }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+    .bio p {
+        margin-bottom: 1rem;
+        line-height: 1.7;
+        font-size: var(--text-lg);
+    }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+    .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+    }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+    .content :global(a:hover),
+    .content :global(a:focus) {
+        text-decoration-color: currentColor;
+    }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+    @media (min-width: 50em) {
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+        }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+        .about > :global(:first-child) {
+            grid-column-start: 2;
+        }
+
+        section {
+            display: contents;
+            font-size: var(--text-lg);
+        }
+    }
 </style>
