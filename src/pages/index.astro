@@ -55,19 +55,19 @@ const projects = (await getCollection("work"))
                 </p>
 
                 <p>
-                    At PedidosYa, I led payments and fraud engineering across
+                    At <strong><a href="https://www.pedidosya.com" target="_blank">PedidosYa</a></strong>, I led payments and fraud engineering across
                     the $2.5B GMV platform spanning 15 countries — one of the
                     highest-fraud payment environments in the world. Imagine how
                     being on-call was like!
                 </p>
                 <p>
-                    At Delivery Hero, I joined the Global Fintech team when it
+                    At <strong><a href="https://www.deliveryhero.com" target="_blank">Delivery Hero</a></strong>, I joined the Global Fintech team when it
                     was 3 people and helped grow it to 100+ people in Berlin HQ
                     and many more at regional entities, powering payment
                     infrastructure for 50+ countries and $40B in annual GMV.
                 </p>
                 <p>
-                    At Payrails, I was the first employee — designing the core
+                    At <strong><a href="https://www.payrails.com" target="_blank">Payrails</a></strong>, I was the first employee — designing the core
                     architecture from scratch, growing the company to 100+
                     people across 9 teams, and building the product that
                     enterprise merchants rely on for their entire payment stack.
@@ -186,6 +186,18 @@ const projects = (await getCollection("work"))
 
     .narrative p {
         margin-bottom: 1rem;
+    }
+
+    .narrative a {
+        color: var(--gray-100);
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+    }
+
+    .narrative a:hover,
+    .narrative a:focus {
+        text-decoration-color: currentColor;
     }
 
     .narrative .cta-highlight {
