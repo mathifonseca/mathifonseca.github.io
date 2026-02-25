@@ -7,7 +7,7 @@ img_alt: Payments in the Sharing Economy panel at PAYMENTSfn 2019
 description: |
   Panel discussion at PAYMENTSfn 2019 exploring how payments infrastructure enables and shapes the sharing economy.
 tags:
-  - Panel
+  - Conference Panel
   - Payments
   - Fintech
 ---

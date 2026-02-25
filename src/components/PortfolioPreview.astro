@@ -10,6 +10,7 @@ const { data, slug } = Astro.props.project;
 
 <a class="card" href={`/talks/${slug}`}>
 	<span class="title">
+		{data.tags[0] && <span class="tag">{data.tags[0]}</span>}
 		{data.title}
 		{data.subtitle && <span class="subtitle">{data.subtitle}</span>}
 	</span>
@@ -48,6 +49,14 @@ const { data, slug } = Astro.props.project;
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
+	}
+
+	.tag {
+		font-size: var(--text-xs, 0.75rem);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--accent-regular);
 	}
 
 	.subtitle {

@@ -7,7 +7,7 @@ img_alt: Payments Engineering and Stoicism conference talk thumbnail
 description: |
   Conference talk exploring how ancient Stoic philosophy applies to building resilient payment systems in an unpredictable world.
 tags:
-  - Talk
+  - Conference Talk
   - Payments
   - Engineering
 ---

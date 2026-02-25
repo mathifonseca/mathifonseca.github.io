@@ -1,5 +1,6 @@
 ---
 title: "Spreedly Case Study: PedidosYa"
+subtitle: "External case study: how PedidosYa built payment infrastructure for Latin America's leading food delivery platform."
 publishDate: 2019-06-10 00:00:00
 img: /assets/pedidosya-case-study-thumb.jpg
 img_alt: Spreedly Case Study video featuring PedidosYa

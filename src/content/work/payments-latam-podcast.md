@@ -1,5 +1,6 @@
 ---
 title: "Payments and Delivery in Latin America"
+subtitle: "Podcast discussion on the unique challenges of building payment systems across Latin American markets."
 publishDate: 2019-08-20 00:00:00
 img: /assets/latam-payments.jpg
 img_alt: Latin American cityscape representing regional payments landscape
