@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.payrails.com)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:fast.wistia.net)",
+      "WebFetch(domain:www.spreedly.com)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl:*)",
+      "Bash(/opt/homebrew/bin/npm run build)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io status)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io diff --stat HEAD)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io log --oneline -5)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io add -A)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io status --short)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io commit -m \"$\\(cat <<''EOF''\nreplace placeholder portfolio with real work and talks\n\n- Remove template placeholder projects \\(bloom-box, h20, etc.\\)\n- Add 7 real portfolio entries: talks, articles, podcasts, case studies\n- Update hero tagline to highlight fintech experience\n- Remove commented-out sections and unused code\n- Add YouTube thumbnails and Unsplash images for all entries\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io push origin master)",
+      "Bash(gh:*)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(/opt/homebrew/bin/gh -R mathifonseca/mathifonseca.github.io run list --limit 3)",
+      "WebFetch(domain:mathifonseca.github.io)",
+      "WebFetch(domain:mathifonseca.me)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io add .github/workflows/deploy.yml)",
+      "Bash(git -C /Users/mathi/code/mathifonseca.github.io commit -m \"$\\(cat <<''EOF''\nfix: trigger deploy workflow on master branch\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(textutil:*)",
+      "Bash(git commit:*)",
+      "Bash(lsof:*)"
+    ]
+  }
+}
