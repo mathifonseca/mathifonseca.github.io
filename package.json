@@ -16,5 +16,8 @@
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.16.15",
     "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "yaml": "^2.8.3"
   }
 }
