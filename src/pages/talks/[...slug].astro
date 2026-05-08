@@ -119,6 +119,120 @@ const { Content } = await entry.render();
 		color: var(--gray-0);
 	}
 
+	/* Collapsible transcript block */
+	.content :global(details) {
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		transition: border-color var(--theme-transition);
+		overflow: hidden;
+	}
+
+	.content :global(details[open]) {
+		border-color: var(--gray-700);
+	}
+
+	.content :global(details > summary) {
+		cursor: pointer;
+		list-style: none;
+		padding: 1rem 1.5rem;
+		font-family: var(--font-brand);
+		font-weight: 600;
+		font-size: var(--text-md);
+		color: var(--gray-100);
+		display: flex;
+		align-items: center;
+		gap: 0.85rem;
+		user-select: none;
+		transition: color var(--theme-transition);
+	}
+
+	.content :global(details > summary::-webkit-details-marker) {
+		display: none;
+	}
+
+	.content :global(details > summary::before) {
+		content: '';
+		display: inline-block;
+		width: 0.45rem;
+		height: 0.45rem;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: rotate(-45deg);
+		transition: transform var(--theme-transition);
+		flex-shrink: 0;
+		margin-top: -0.15rem;
+	}
+
+	.content :global(details[open] > summary::before) {
+		transform: rotate(45deg);
+		margin-top: -0.25rem;
+	}
+
+	.content :global(details > summary:hover),
+	.content :global(details > summary:focus-visible) {
+		color: var(--link-color);
+		outline: none;
+	}
+
+	/* Body padding via per-child margin so blockquote/paragraphs stay flush */
+	.content :global(details > *:not(summary)) {
+		margin-inline: 1.5rem;
+	}
+
+	.content :global(details > *:last-child) {
+		margin-bottom: 1.5rem;
+	}
+
+	.content :global(details > * + *) {
+		margin-top: 1rem;
+	}
+
+	/* Disclaimer blockquote — quieter than the main content blockquote */
+	.content :global(details > blockquote) {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 400;
+		font-style: italic;
+		line-height: 1.5;
+		color: var(--gray-300);
+		border-inline-start: 3px solid var(--gray-700);
+		background-color: rgba(0, 0, 0, 0.04);
+		padding: 0.75rem 1rem;
+		border-radius: 0 0.5rem 0.5rem 0;
+		margin-top: 1.25rem;
+	}
+
+	:global(.theme-dark) .content :global(details > blockquote) {
+		background-color: rgba(255, 255, 255, 0.03);
+	}
+
+	/* Transcript paragraphs — comfortable reading */
+	.content :global(details > p) {
+		font-size: var(--text-base);
+		line-height: 1.7;
+		color: var(--gray-200);
+	}
+
+	/* Speaker labels at the start of dialogue paragraphs */
+	.content :global(details > p > strong:first-child) {
+		color: var(--link-color);
+		font-family: var(--font-brand);
+		font-weight: 700;
+	}
+
+	/* Extra breathing room between speaker turns */
+	.content :global(details > p:has(> strong:first-child)) {
+		margin-top: 1.75rem;
+	}
+
+	/* But not for the very first turn after the disclaimer/start */
+	.content :global(details > blockquote + p:has(> strong:first-child)),
+	.content :global(details > summary + p:has(> strong:first-child)) {
+		margin-top: 1.5rem;
+	}
+
 	.back-link,
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
