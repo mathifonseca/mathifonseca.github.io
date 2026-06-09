@@ -5,10 +5,10 @@ interface Props {
 	project: CollectionEntry<'work'>;
 }
 
-const { data, slug } = Astro.props.project;
+const { data, id } = Astro.props.project;
 ---
 
-<a class="card" href={`/talks/${slug}`}>
+<a class="card" href={`/talks/${id}`}>
 	<span class="title">
 		{data.tags[0] && <span class="tag">{data.tags[0]}</span>}
 		{data.title}

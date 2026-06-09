@@ -10,14 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/partytown": "^2.1.2",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.16.15",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/mdx": "^6.0.2",
+    "@astrojs/partytown": "^2.1.7",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.4",
     "typescript": "^5.6.3"
   },
   "overrides": {
-    "yaml": "^2.8.3"
+    "yaml": "^2.8.3",
+    "devalue": "^5.8.1",
+    "fast-uri": "^3.1.2"
   }
 }
