@@ -12,11 +12,60 @@ import Hero from "../components/Hero.astro";
         <main class="wrapper resume">
             <Hero
                 title="Work"
-                tagline="Principal Solutions Architect<br/>with 15+ years building systems at scale"
+                tagline="Senior Staff Engineer, Fintech<br/>with 15+ years building systems at scale"
             />
 
             <section class="experience">
                 <h2 class="section-title">Experience</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <h3>Wolt + DoorDash</h3>
+                        <span class="location">Berlin, Germany</span>
+                    </div>
+                    <div class="role">
+                        <span class="title">Senior Staff Engineer, Fintech</span>
+                        <span class="dates">May 2026 – Present</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>Payments architecture at scale</strong> —
+                            technical direction for the international Money
+                            platform and financial services spanning Wolt,
+                            Deliveroo, and DoorDash — payments, payouts,
+                            lending, card issuing, gift cards, and more, across
+                            Europe, the Middle East, Asia, and the Americas
+                        </li>
+                        <li>
+                            <strong>Platform consolidation</strong> — as
+                            DoorDash, Wolt, and Deliveroo work more closely
+                            together, helping bring their financial solutions
+                            onto common ground. Apparently I have a type, having
+                            done versions of this building Delivery Hero's global
+                            fintech and helping enterprise merchants consolidate
+                            their stacks at Payrails
+                        </li>
+                        <li>
+                            <strong>AI-native engineering</strong> — driving AI
+                            adoption and developer velocity across the org,
+                            moving teams from AI-assisted to genuinely AI-native
+                            ways of working, and helping define how we evaluate
+                            AI-built systems
+                        </li>
+                        <li>
+                            <strong>Cross-org technical leadership</strong> —
+                            shaping long-term technical direction across teams
+                            and functions through architecture docs, prototypes,
+                            and RFCs, more than through code alone
+                        </li>
+                        <li>
+                            <strong>Craft & mentorship</strong> — setting the
+                            engineering quality bar and growing the people around
+                            me, bringing my experience into a high-stakes fintech
+                            org that is evolving fast
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="job">
                     <div class="job-header">
@@ -207,6 +256,23 @@ import Hero from "../components/Hero.astro";
 
                 <div class="job">
                     <div class="job-header">
+                        <h3>Softruck</h3>
+                        <span class="location">Belo Horizonte, Brazil</span>
+                    </div>
+                    <div class="role">
+                        <span class="title">CTO</span>
+                        <span class="dates">Sep 2015 – Dec 2015</span>
+                    </div>
+                    <ul>
+                        <li>
+                            Led technology at AI/transportation startup
+                            processing vehicle data across Brazil and Uruguay
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
                         <h3>MercadoLibre</h3>
                         <span class="location">Montevideo, Uruguay</span>
                     </div>
@@ -222,23 +288,6 @@ import Hero from "../components/Hero.astro";
                         <li>
                             Architectural decisions under demanding performance
                             restrictions
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <h3>Softruck</h3>
-                        <span class="location">Belo Horizonte, Brazil</span>
-                    </div>
-                    <div class="role">
-                        <span class="title">CTO</span>
-                        <span class="dates">Sep 2015 – Dec 2015</span>
-                    </div>
-                    <ul>
-                        <li>
-                            Led technology at AI/transportation startup
-                            processing vehicle data across Brazil and Uruguay
                         </li>
                     </ul>
                 </div>
@@ -301,9 +350,15 @@ import Hero from "../components/Hero.astro";
                         </p>
                     </div>
                     <div class="skill-category">
+                        <h4>AI & Developer Productivity</h4>
+                        <p>
+                            AI-native engineering · Developer velocity · Applied LLMs · Agentic workflows · AI adoption & enablement
+                        </p>
+                    </div>
+                    <div class="skill-category span-full">
                         <h4>Languages</h4>
                         <p>
-                            Spanish (Native) · English (Fluent) · Portuguese (Professional) · German & Italian (Elementary)
+                            Spanish (Native) · English (Fluent) · Portuguese (Professional) · German (B1) · Italian (Elementary)
                         </p>
                     </div>
                 </div>
@@ -439,7 +494,11 @@ import Hero from "../components/Hero.astro";
         }
 
         .skills-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skill-category.span-full {
+            grid-column: 1 / -1;
         }
     }
 </style>
