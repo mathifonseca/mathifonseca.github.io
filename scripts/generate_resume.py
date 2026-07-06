@@ -338,8 +338,8 @@ class Doc:
         self.section("Selected Talks & Publications")
         self.talks()
         self.footer()
-        self.c.setTitle("Mathi Fonseca — Resume")
-        self.c.setAuthor("Mathi Fonseca")
+        self.c.setTitle("Mathias Fonseca — Resume")
+        self.c.setAuthor("Mathias Fonseca")
         self.c.save()
 
 
